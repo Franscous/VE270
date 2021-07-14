@@ -28,6 +28,7 @@ output [6:0] C;
 wire [3:0] code;
 assign AN = 4'b1110;
 wire clock_1;
+wire reg_load;
 wire [3:0] Q;
 clock_divider cd (clock,reset,clock_1);
 keypad_scanner scanner(clock_1,reset,row,col,code,reg_load);
