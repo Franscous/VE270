@@ -52,7 +52,7 @@ always @(current_state,OR_row) begin
         case(current_state)
             init:begin
                 col = 4'b1111;
-                if(OR_row == 1)next_state = 4'd1;
+		if(OR_row == 1)next_state = state_1;
                 else next_state = init;
             end
             state_1:begin
